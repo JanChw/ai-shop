@@ -1,0 +1,6 @@
+使用shop为项目名
+本项目只是配手机端
+使用solidjs + tailwind css
+代码规范使用standardjs
+图片占位使用https://picsum.photos/
+使用pnpm代替npm
