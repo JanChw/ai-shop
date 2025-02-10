@@ -6,7 +6,7 @@ function Search() {
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <main class="flex-grow p-4">
         <h1 class="text-2xl font-bold mb-4">搜索结果</h1>
         <p>搜索词：{searchTerm()}</p>
