@@ -7,7 +7,7 @@ const Mine: Component = () => {
   const [activeTab, setActiveTab] = createSignal('orders')
 
   return (
-    <div class="min-h-screen bg-gray-100 p-4">
+    <div class="min-h-screen bg-primary-color p-4">
       {/* 头部区域 */}
       <div class="flex items-center justify-between mb-6">
         <div class="flex items-center">
