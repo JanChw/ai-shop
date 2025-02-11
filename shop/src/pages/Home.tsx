@@ -26,11 +26,11 @@ function Home() {
       </div>
       
       <main class={`transition-all duration-300 mt-6 ${isSidebarOpen() ? 'ml-device-max' : 'ml-0'}`}  style='width:100vw;'>
-        <Carousel class="animate-fade-in-up" />
-        <TodaySpecial class="animate-fade-in-up" />
-        <NewProducts class="animate-fade-in-up" />
-        <DiscountFood class="animate-fade-in-up" />
-        <FoodRecommendation class="animate-fade-in-up" />
+        <Carousel effect="fade-in-up" />
+        <TodaySpecial effect="fade-in-up" />
+        <NewProducts effect="fade-in-up" />
+        <DiscountFood effect="fade-in-up" />
+        <FoodRecommendation effect="fade-in-up" />
       </main>
       </div>
     </div>

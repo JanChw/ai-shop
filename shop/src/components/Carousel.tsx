@@ -1,7 +1,7 @@
 import { createSignal, onCleanup, onMount } from 'solid-js'
 
 interface CarouselProps {
-  class?: string
+  effect?: string
 }
 
 function Carousel(props: CarouselProps) {
@@ -59,7 +59,7 @@ function Carousel(props: CarouselProps) {
   })
 
   return (
-    <div class="relative w-full px-4 aspect-[3/4] h-48 overflow-hidden" ref={carouselRef!}>
+    <div class={`relative w-full px-4 aspect-[3/4] h-48 overflow-hidden ${props.effect}`} ref={carouselRef!}>
       <div class="relative h-full w-full rounded-lg overflow-hidden">
         <div
           class="absolute inset-0 flex transition-transform duration-500"

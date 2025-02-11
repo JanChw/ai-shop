@@ -9,7 +9,7 @@ interface FoodItem {
 }
 
 interface FoodRecommendationProps {
-  class?: string
+  effect?: string
 }
 
 function FoodRecommendation(props: FoodRecommendationProps) {
@@ -73,7 +73,7 @@ function FoodRecommendation(props: FoodRecommendationProps) {
   };
 
   return (
-    <section class="px-4 py-8 mb-[73px]">
+    <section class={`px-4 py-8 mb-[73px] ${props.effect}`}>
       <header class='flex space-between'>
         <h2 class="text-2xl font-bold mb-4">美食推荐</h2>
         {visibleFoods().length < filteredFoods().length && (

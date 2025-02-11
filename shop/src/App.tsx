@@ -11,7 +11,7 @@ import './App.css'
 const Layout: Component<{ children: JSX.Element }> = (props) => {
   return (
     <div class="flex flex-col h-full">
-      <main class="flex-1 pt-0 animate-fade-in-up">
+      <main class="flex-1 pt-0 fade-in-up">
         {props.children}
       </main>
       

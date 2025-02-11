@@ -9,7 +9,7 @@ interface Discount {
   }
 
   interface DiscountFoodProps {
-    class?: string
+    effect?: string
   }
 
 function DiscountFood(props: DiscountFoodProps) {

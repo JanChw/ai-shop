@@ -11,25 +11,13 @@ importers:
       '@solidjs/router':
         specifier: ^0.15.3
         version: 0.15.3(solid-js@1.9.4)
-      '@tailwindcss/vite':
-        specifier: ^4.0.5
-        version: 4.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
-      solid-heroicons:
-        specifier: ^3.2.4
-        version: 3.2.4(solid-js@1.9.4)
-      solid-icons:
-        specifier: ^1.1.0
-        version: 1.1.0(solid-js@1.9.4)
       solid-js:
         specifier: ^1.9.4
         version: 1.9.4
     devDependencies:
-      '@tailwindcss/postcss':
+      '@tailwindcss/vite':
         specifier: ^4.0.5
-        version: 4.0.5
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.5.1)
+        version: 4.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
       eslint-config-standard:
         specifier: ^17.1.0
         version: 17.1.0(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint-plugin-n@17.15.1(eslint@8.57.1))(eslint-plugin-promise@7.2.1(eslint@8.57.1))(eslint@8.57.1)
@@ -42,9 +30,6 @@ importers:
       eslint-plugin-promise:
         specifier: ^7.2.1
         version: 7.2.1(eslint@8.57.1)
-      postcss:
-        specifier: ^8.5.1
-        version: 8.5.1
       standardjs:
         specifier: 1.0.0-alpha
         version: 1.0.0-alpha
@@ -62,10 +47,6 @@ importers:
         version: 2.11.1(solid-js@1.9.4)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
 
 packages:
-
-  '@alloc/quick-lru@5.2.0':
-    resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
-    engines: {node: '>=10'}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -549,9 +530,6 @@ packages:
     resolution: {integrity: sha512-iWGyOCu0TuzvCBisWbGv2K9+7QCfE0ztgtrZOvb9iF7V7ChVkD15Obe3HevZrhjngAc34jDA+OMSuSvkrpTy4A==}
     engines: {node: '>= 10'}
 
-  '@tailwindcss/postcss@4.0.5':
-    resolution: {integrity: sha512-U7IPb+KMASETtUvISwePM+1h+jLQspXf2ncfX/LmP/4AaH7b7DJQhqXzDCaJQd/MIh54dRUO93i9q4+Xm7dlVg==}
-
   '@tailwindcss/vite@4.0.5':
     resolution: {integrity: sha512-/i4hjLTUYVjUG0MTUviQP3HR/hzwyzv8Sq4sz2pnsNuf+FIjjhJB0vcnIMH1KIX0k8ozD6CBv2Dl76tlm/JFFA==}
     peerDependencies:
@@ -632,13 +610,6 @@ packages:
   async-function@1.0.0:
     resolution: {integrity: sha512-hsU18Ae8CDTR6Kgu9DYf0EbCr/a5iGL0rytQDobUcdpYOKokk8LEjVphnXkDkgpi0wYVsqrXuP0bZxJaTqdgoA==}
     engines: {node: '>= 0.4'}
-
-  autoprefixer@10.4.20:
-    resolution: {integrity: sha512-XY25y5xSv/wEoqzDyXXME4AFfkZI0P23z6Fs3YgymDnKJkCGOnkL0iTxCa85UTqaSgfcqyf3UA6+c7wUvx/16g==}
-    engines: {node: ^10 || ^12 || >=14}
-    hasBin: true
-    peerDependencies:
-      postcss: ^8.1.0
 
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
@@ -950,9 +921,6 @@ packages:
   for-each@0.3.4:
     resolution: {integrity: sha512-kKaIINnFpzW6ffJNDjjyjrk21BkDx38c0xa/klsT8VzLCaMEefv4ZTacrcVR4DmgTeBra++jMDAfS/tS799YDw==}
     engines: {node: '>= 0.4'}
-
-  fraction.js@4.3.7:
-    resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -1335,10 +1303,6 @@ packages:
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
 
-  normalize-range@0.1.2:
-    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
-    engines: {node: '>=0.10.0'}
-
   object-inspect@1.13.4:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
     engines: {node: '>= 0.4'}
@@ -1410,9 +1374,6 @@ packages:
   possible-typed-array-names@1.1.0:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
-
-  postcss-value-parser@4.2.0:
-    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
   postcss@8.5.1:
     resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
@@ -1532,16 +1493,6 @@ packages:
   side-channel@1.1.0:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
-
-  solid-heroicons@3.2.4:
-    resolution: {integrity: sha512-u6BMdFLvkJnvUGYzdFcWp1wvJ4hb9Y1zd3AbZ9D3bUmmiy9jBzNZX+RcqBCI2EKRvdQwAb1UB9bkESfqfhayDg==}
-    peerDependencies:
-      solid-js: '>= ^1.2.5'
-
-  solid-icons@1.1.0:
-    resolution: {integrity: sha512-IesTfr/F1ElVwH2E1110s2RPXH4pujKfSs+koT8rwuTAdleO5s26lNSpqJV7D1+QHooJj18mcOiz2PIKs0ic+A==}
-    peerDependencies:
-      solid-js: '*'
 
   solid-js@1.9.4:
     resolution: {integrity: sha512-ipQl8FJ31bFUoBNScDQTG3BjN6+9Rg+Q+f10bUbnO6EOTTf5NGerJeHc7wyu5I4RMHEl/WwZwUmy/PTRgxxZ8g==}
@@ -1742,8 +1693,6 @@ packages:
     engines: {node: '>=10'}
 
 snapshots:
-
-  '@alloc/quick-lru@5.2.0': {}
 
   '@ampproject/remapping@2.3.0':
     dependencies:
@@ -2115,15 +2064,6 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.5
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.5
 
-  '@tailwindcss/postcss@4.0.5':
-    dependencies:
-      '@alloc/quick-lru': 5.2.0
-      '@tailwindcss/node': 4.0.5
-      '@tailwindcss/oxide': 4.0.5
-      lightningcss: 1.29.1
-      postcss: 8.5.1
-      tailwindcss: 4.0.5
-
   '@tailwindcss/vite@4.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))':
     dependencies:
       '@tailwindcss/node': 4.0.5
@@ -2230,16 +2170,6 @@ snapshots:
       is-array-buffer: 3.0.5
 
   async-function@1.0.0: {}
-
-  autoprefixer@10.4.20(postcss@8.5.1):
-    dependencies:
-      browserslist: 4.24.4
-      caniuse-lite: 1.0.30001699
-      fraction.js: 4.3.7
-      normalize-range: 0.1.2
-      picocolors: 1.1.1
-      postcss: 8.5.1
-      postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
     dependencies:
@@ -2677,8 +2607,6 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  fraction.js@4.3.7: {}
-
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -3026,8 +2954,6 @@ snapshots:
 
   node-releases@2.0.19: {}
 
-  normalize-range@0.1.2: {}
-
   object-inspect@1.13.4: {}
 
   object-keys@1.1.1: {}
@@ -3107,8 +3033,6 @@ snapshots:
   picocolors@1.1.1: {}
 
   possible-typed-array-names@1.1.0: {}
-
-  postcss-value-parser@4.2.0: {}
 
   postcss@8.5.1:
     dependencies:
@@ -3271,14 +3195,6 @@ snapshots:
       side-channel-list: 1.0.0
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
-
-  solid-heroicons@3.2.4(solid-js@1.9.4):
-    dependencies:
-      solid-js: 1.9.4
-
-  solid-icons@1.1.0(solid-js@1.9.4):
-    dependencies:
-      solid-js: 1.9.4
 
   solid-js@1.9.4:
     dependencies:

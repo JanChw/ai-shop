@@ -1,7 +1,7 @@
 import { createSignal } from 'solid-js'
 
 interface TodaySpecialProps {
-  class?: string
+  effect?: string
 }
 
 function TodaySpecial(props: TodaySpecialProps) {
@@ -53,7 +53,7 @@ function TodaySpecial(props: TodaySpecialProps) {
   }
 
   return (
-    <section class="px-4 py-8">
+    <section class={`px-4 py-8 ${props.effect}`}>
       <h2 class="text-2xl font-bold mb-4">今日吃啥</h2>
       <div
         class="relative rounded-lg overflow-hidden cursor-pointer"

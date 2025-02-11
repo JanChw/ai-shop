@@ -1,6 +1,6 @@
 import { For } from 'solid-js'
 interface NewProductsProps {
-  class?: string
+  effect?: string
 }
 
 function NewProducts(props: NewProductsProps) {
@@ -38,7 +38,7 @@ function NewProducts(props: NewProductsProps) {
   ]
 
   return (
-    <section class="px-4 py-8">
+    <section class={`px-4 py-8 ${props.effect}`}>
       <h2 class="text-2xl font-bold mb-4">新品推荐</h2>
       <div class="relative">
         <div class="overflow-x-auto scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

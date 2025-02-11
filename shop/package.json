@@ -10,19 +10,14 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.15.3",
-    "@tailwindcss/vite": "^4.0.5",
-    "solid-heroicons": "^3.2.4",
-    "solid-icons": "^1.1.0",
     "solid-js": "^1.9.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "@tailwindcss/postcss": "^4.0.5",
+    "@tailwindcss/vite": "^4.0.5",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.15.1",
     "eslint-plugin-promise": "^7.2.1",
-    "postcss": "^8.5.1",
     "standardjs": "1.0.0-alpha",
     "tailwindcss": "^4.0.5",
     "typescript": "~5.7.2",
