@@ -21,15 +21,15 @@ const Addresses: Component = () => {
       <h2 class="text-xl font-bold mb-4">地址管理</h2>
       <div class="space-y-4">
         {addresses.map(address => (
-          <div class="p-4 bg-gray-50 rounded-lg">
+          <div class="card bg-base-100 shadow-sm p-4">
             <div class="flex items-center justify-between">
               <div>
                 <p class="font-medium">{address.address}</p>
-                <p class="text-sm text-gray-600">
+                <p class="text-sm text-base-content/60">
                   {address.contact} | {address.phone}
                 </p>
               </div>
-              <button class="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-lg">
+              <button class="btn btn-sm btn-outline btn-primary">
                 编辑
               </button>
             </div>

@@ -7,46 +7,34 @@ const Mine: Component = () => {
   const [activeTab, setActiveTab] = createSignal('orders')
 
   return (
-    <div class="min-h-screen bg-primary-color p-4">
+    <div class="min-h-screen bg-base-200 p-4">
       {/* 头部区域 */}
       <div class="flex items-center justify-between mb-6">
         <div class="flex items-center">
-          <img 
-            src="/src/assets/user.png" 
-            alt="用户头像"
-            class="w-12 h-12 rounded-full mr-3"
-          />
-          <span class="text-lg font-medium">张三</span>
+          <div class="avatar">
+            <div class="w-12 rounded-full">
+              <img src="/src/assets/user.png" alt="用户头像" />
+            </div>
+          </div>
+          <span class="text-lg font-medium ml-3">张三</span>
         </div>
 
         {/* 标签切换 */}
-        <div class="flex space-x-4">
+        <div class="tabs tabs-boxed">
           <button
-            class={`px-4 py-2 rounded-lg ${
-              activeTab() === 'orders' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-white text-gray-700'
-            }`}
+            class={`tab ${activeTab() === 'orders' ? 'tab-active' : ''}`}
             onClick={() => setActiveTab('orders')}
           >
             订单
           </button>
           <button
-            class={`px-4 py-2 rounded-lg ${
-              activeTab() === 'addresses' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-white text-gray-700'
-            }`}
+            class={`tab ${activeTab() === 'addresses' ? 'tab-active' : ''}`}
             onClick={() => setActiveTab('addresses')}
           >
             地址管理
           </button>
           <button
-            class={`px-4 py-2 rounded-lg ${
-              activeTab() === 'profile' 
-                ? 'bg-blue-600 text-white' 
-                : 'bg-white text-gray-700'
-            }`}
+            class={`tab ${activeTab() === 'profile' ? 'tab-active' : ''}`}
             onClick={() => setActiveTab('profile')}
           >
             个人信息
@@ -55,7 +43,7 @@ const Mine: Component = () => {
       </div>
 
       {/* 内容区域 */}
-      <div class="bg-white rounded-lg shadow p-6">
+      <div class="card bg-base-100 shadow-xl p-6">
         <Show when={activeTab() === 'orders'}>
           <Orders />
         </Show>

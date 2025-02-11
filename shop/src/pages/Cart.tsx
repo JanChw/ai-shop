@@ -48,63 +48,70 @@ const Cart: Component = () => {
 
 
   return (
-    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="min-h-screen bg-base-200 p-4">
       {/* 商品列表 */}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
-      {items().map((item: CartItem, index: number) => (
-  <div class="flex items-center bg-white rounded-lg shadow p-3">
-    <img 
-      src={item.image} 
-      alt={item.name}
-      class="w-16 h-16 rounded-lg object-cover"
-    />
-    <div class="ml-4 flex-1">
-      <h3 class="text-lg font-medium">{item.name}</h3>
-      <div class="flex items-center justify-between">
-        <p class="text-gray-600">¥{item.price}</p>
-        <div class="flex items-center">
-          <span class="text-gray-600 mr-2">数量:</span>
-          <button 
-            class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-            onClick={() => updateQuantity(index, -1)}
-          >
-            -
-          </button>
-          <span class="font-bold mx-2">{item.quantity}</span>
-          <button 
-            class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-            onClick={() => updateQuantity(index, 1)}
-          >
-            +
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-))}
+        {items().map((item: CartItem, index: number) => (
+          <div class="card bg-base-100 shadow-sm">
+            <div class="card-body">
+              <div class="flex items-center">
+                <figure>
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    class="w-16 h-16 rounded-lg object-cover"
+                  />
+                </figure>
+                <div class="ml-4 flex-1">
+                  <h3 class="card-title">{item.name}</h3>
+                  <p class="text-gray-600">¥{item.price}</p>
+                </div>
+              </div>
+              <div class="card-actions justify-end">
+                <div class="join">
+                  <button 
+                    class="btn btn-sm join-item"
+                    onClick={() => updateQuantity(index, -1)}
+                  >
+                    -
+                  </button>
+                  <span class="btn btn-sm join-item no-animation">
+                    {item.quantity}
+                  </span>
+                  <button 
+                    class="btn btn-sm join-item"
+                    onClick={() => updateQuantity(index, 1)}
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* 总计区域 */}
-      <div class="mt-6 p-4 bg-white rounded-lg shadow">
+      <div class="card bg-base-100 mt-6 p-4 shadow-sm">
         <div class="flex justify-between">
           <span class="text-gray-600">一共</span>
           <span class="font-bold">{totalItems()}份</span>
         </div>
         <div class="flex justify-between mt-2">
           <span class="text-gray-600">共花费</span>
-          <span class="text-xl font-bold text-blue-600">¥{total()}</span>
+          <span class="text-xl font-bold text-primary">¥{total()}</span>
         </div>
       </div>
 
       {/* 购买按钮 */}
-      <button class="w-full mt-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-bold hover:bg-blue-700 transition-colors">
+      <button class="btn btn-primary w-full mt-6">
         购买
       </button>
 
       {/* 确认对话框 */}
       <Show when={showConfirm() && confirmIndex() !== null}>
         <Confirm
-          status='text-red-500'
+          status='text-error'
           message="确定要移除该商品吗？"
           onConfirm={() => handleConfirmRemove(confirmIndex()!)}
           onCancel={() => setShowConfirm(false)}
@@ -112,6 +119,7 @@ const Cart: Component = () => {
       </Show>
     </div>
   )
+
 }
 
 export default Cart

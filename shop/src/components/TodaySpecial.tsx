@@ -56,33 +56,34 @@ function TodaySpecial(props: TodaySpecialProps) {
     <section class={`px-4 py-8 ${props.effect}`}>
       <h2 class="text-2xl font-bold mb-4">今日吃啥</h2>
       <div
-        class="relative rounded-lg overflow-hidden cursor-pointer"
+        class="card bg-base-100 shadow-xl cursor-pointer"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <img
-          src={foods[currentFood()].image}
-          alt="今日特别推荐"
-          class={`w-full h-64 object-cover transition-all duration-300 ${
-            isHovered() ? 'scale-105' : ''
-          } ${isAnimating() ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
-        />
-        <div class="absolute inset-0 bg-black/30 flex flex-col justify-end p-4">
-          <h3 class="text-white text-xl font-semibold mb-2">{foods[currentFood()].name}</h3>
-          <p class="text-white/80 text-sm">{foods[currentFood()].description}</p>
-        </div>
+        <figure class="relative">
+          <img
+            src={foods[currentFood()].image}
+            alt="今日特别推荐"
+            class={`w-full h-64 object-cover transition-all duration-300 ${
+              isHovered() ? 'scale-105' : ''
+            } ${isAnimating() ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
+          />
+          <div class="absolute inset-0 bg-black/30 flex flex-col justify-end p-4">
+            <h3 class="text-white text-xl font-semibold mb-2">{foods[currentFood()].name}</h3>
+            <p class="text-white/80 text-sm">{foods[currentFood()].description}</p>
+          </div>
+        </figure>
       </div>
 
-      <div class='flex justify-around'>
+      <div class="flex justify-around mt-6">
         <button
-          class="mt-4 w-1/3 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 active:scale-95 transition-all"
+          class="btn btn-primary w-1/3"
           onClick={handleClick}
         >
           今日吃啥
         </button>
-        
         <button
-          class="mt-4 w-1/3 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 active:scale-95 transition-all"
+          class="btn btn-secondary w-1/3"
         >
           吃了你
         </button>

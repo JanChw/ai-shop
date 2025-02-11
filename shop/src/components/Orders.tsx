@@ -22,30 +22,30 @@ const Orders: Component = () => {
     <div>
       <h2 class="text-xl font-bold mb-4">我的订单</h2>
       <div class="space-y-4">
-        {orders.map(order => (
-          <div class="flex items-center p-4 bg-gray-50 rounded-lg">
-            <img 
-              src={order.image}
-              alt={order.name}
-              class="w-16 h-16 rounded-lg mr-4"
-            />
-            <div class="flex-1">
-              <h3 class="font-medium">{order.name}</h3>
-              <p class="text-sm text-gray-600">¥{order.price}</p>
-            </div>
-            <div class="ml-4">
-              <span class="text-sm text-gray-600">{order.status}</span>
-            </div>
-            <div class="ml-4 space-x-2">
-              <button class="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-lg">
-                查看详情
-              </button>
-              <button class="px-3 py-1 text-sm bg-red-100 text-red-600 rounded-lg">
-                删除订单
-              </button>
-            </div>
-          </div>
-        ))}
+    
+{orders.map(order => (
+  <div class="card bg-base-100 shadow-sm p-4">
+    <div class="flex flex-row justify-between">
+      <figure>
+        <img 
+          src={order.image}
+          alt={order.name}
+          class="w-24 h-24 rounded-lg"
+        />
+      </figure>
+      <div class="text-center mt-2">
+        <h3 class="card-title">{order.name}</h3>
+        <p class="text-sm text-base-content/60">¥{order.price}</p>
+      </div>
+    </div>
+    <div class="card-actions justify-around items-center mt-4">
+      <span class="badge badge-outline">{order.status}</span>
+      <button class="btn btn-sm btn-ghost text-primary">查看详情</button>
+      <button class="btn btn-sm btn-ghost text-error">删除订单</button>
+    </div>
+  </div>
+))}
+
       </div>
     </div>
   )
